@@ -24,7 +24,7 @@ const Rightbar = ({user}) => {
   }
 
   const ProfileRightbar = ()=>{
-    const localUrl = "http://localhost:3000/assets/"
+    const localUrl = "http://127.0.0.1:5000/images/"
     return (
       <>
       <h4 className='rightbarTitle'>User Information</h4>
@@ -46,26 +46,6 @@ const Rightbar = ({user}) => {
       <div className="rightbarFollowings">
         <div className="rightbarFollowing">
           <img src={`${localUrl}person/1.jpg`} alt="" className="rightbarFollowingImg" />
-          <span className="rightbarFollowingName">Shivi</span>
-        </div>
-        <div className="rightbarFollowing">
-          <img src={`${localUrl}person/2.jpg`} alt="" className="rightbarFollowingImg"/>
-          <span className="rightbarFollowingName">Shivi</span>
-        </div>
-        <div className="rightbarFollowing">
-          <img src={`${localUrl}person/3.jpg`} alt="" className="rightbarFollowingImg" />
-          <span className="rightbarFollowingName">Shivi</span>
-        </div>
-        <div className="rightbarFollowing">
-          <img src={`${localUrl}person/4.jpg`} alt="" className="rightbarFollowingImg" />
-          <span className="rightbarFollowingName">Shivi</span>
-        </div>
-        <div className="rightbarFollowing">
-          <img src={`${localUrl}person/5.jpg`} alt="" className="rightbarFollowingImg" />
-          <span className="rightbarFollowingName">Shivi</span>
-        </div>
-        <div className="rightbarFollowing">
-          <img src="/assets/person/3.jpg" alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Shivi</span>
         </div>
       </div>

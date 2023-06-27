@@ -2,7 +2,7 @@ import React from 'react'
 import './online.css'
 
 const Online = ({user}) => {
-  const localUrl = "http://localhost:3000/assets/"
+  const localUrl = "http://127.0.0.1:5000/images/"
   return (
     <li className="rightbarFriend">
         <div className="rightbarProfileImgContainer">

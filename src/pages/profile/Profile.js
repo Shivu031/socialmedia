@@ -21,7 +21,7 @@ const Profile = () => {
         fetchUser();
     },[username])
 
-  const localUrl = "http://localhost:3000/assets/"
+  const localUrl = "http://127.0.0.1:5000/images/"
   return (
     <>
       <Topbar/>
@@ -30,8 +30,8 @@ const Profile = () => {
         <div className="profileRight">
             <div className="profileRightTop">
                 <div className="profileCover">
-                <img src={user.coverPicture || localUrl+"Person/noCover.png"} alt="" className="profileCoverImg" />
-                <img src={user.profilePicture || localUrl+"Person/noAvatar.png"} alt="" className="profileUserImg" />
+                <img src={user.coverPicture ? localUrl+user.coverPicture : localUrl+"Person/noCover.png"} alt="" className="profileCoverImg" />
+                <img src={user.profilePicture ? localUrl+user.profilePicture : localUrl+"Person/noAvatar.png"} alt="" className="profileUserImg" />
                 </div>
                 <div className="profileInfo">
                     <h4 className="profileInfoName">{user.username}</h4>

@@ -1,7 +1,7 @@
 .login{
     width: 100vw;
     height: 100vh;
-    background-color: antiquewhite;
+    background-color: rgb(247, 244, 240);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,12 +55,18 @@
     font-weight: 500;
     cursor: pointer;
 }
+.loginButton:focus{
+    outline: none;
+}
+.loginButton:disabled{
+    cursor: not-allowed;
+}
 .loginForgot{
     text-align: center;
     color: rgb(21, 57, 172);
 }
 .loginRegisterButton{
-    width: 60%;
+    width: 80%;
     align-self: center;
     height: 50px;
     border-radius: 50px;
