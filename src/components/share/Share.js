@@ -43,6 +43,12 @@ const Share = () => {
                 <input placeholder={"What's in your mind "+ user.username + "?"} className="shareInput" ref={description} />
             </div>
             <hr className="shareHr"/>
+            {file && (
+                <div className="shareImgContainer">
+                    <i className="fa-solid fa-xmark" onClick={()=>setFile(null)}></i>
+                    <img src={URL.createObjectURL(file)} alt="" className="shareImg"/>
+                </div>
+            )}
             <form className="shareBottom" onSubmit={submitHandler}>
                 <div className="shareOptions">
                     <label htmlFor="file" className="shareOption">
