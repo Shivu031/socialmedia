@@ -31,10 +31,10 @@ const Rightbar = ({user}) => {
   const handleClick = async()=>{
     try{
       if(followed){
-        await axios.put("/users/"+user._id+"/unfollow",{userId:currentUser._id});
+        await axios.put(`/users/${user._id}/unfollow`,{userId:currentUser._id});
         dispatch({type:"UNFOLLOW",payload:user._id});
       }else{
-        await axios.put("/users/"+user._id+"/follow",{userId:currentUser._id});
+        await axios.put(`/users/${user._id}/follow`,{userId:currentUser._id});
         dispatch({type:"FOLLOW",payload:user._id});
       }
     }catch(err){
@@ -53,7 +53,7 @@ const Rightbar = ({user}) => {
         <img src={`${localUrl}ad.jpg`} alt="" className="rightbarAd" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
-          {Users.map(u=>(
+          {Users.map((u)=>(
             <Online key={u.id} user={u}/>
           ))}
         </ul>

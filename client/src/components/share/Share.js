@@ -50,12 +50,12 @@ const Share = () => {
                 </div>
             )}
             <form className="shareBottom" onSubmit={submitHandler}>
-                <div className="shareOptions">
-                    <label htmlFor="file" className="shareOption">
+                <label className="shareOptions">
+                    <div htmlFor="file" className="shareOption">
                         <i className="fa-solid fa-photo-film fa-lg"></i>
                         <span className="shareOptionText mx-2">Photo or Video</span>
                         <input style={{display:"none"}} type="file" id="file" accept=".png,.jpg,.jpeg" onChange={(e)=>setFile(e.target.files[0])}/>
-                    </label>
+                    </div>
                     <div className="shareOption">
                         <i className="fa-solid fa-tag fa-xl"></i>
                         <span className="shareOptionText mx-2">Tag</span>
@@ -68,7 +68,7 @@ const Share = () => {
                         <i className="fa-solid fa-face-smile fa-xl"></i>
                         <span className="shareOptionText mx-2">Feelings</span>
                     </div>
-                </div>
+                </label>
                 <button className="shareButton" type="submit">Share</button>
             </form>
         </div>
